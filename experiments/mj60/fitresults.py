@@ -276,8 +276,7 @@ def get_resolution_params():
 
 def read_hmc_results():
 
-    print("centroid = {}".format(results.GetCentroid(2614.511)))
-
+    print(results.GetParsForPar(ROOT.GATMultiPeakFitter.kHs)[2])
 
 def draw_results():
 
@@ -302,7 +301,7 @@ def draw_results():
     #results.DrawRegion(3, "name", "p")
 
     # draw entire spectrum w/ fits
-    results.DrawRegions()
+    results.DrawRegions("s")
 
 if __name__ == '__main__':
         main()
